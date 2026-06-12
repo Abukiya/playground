@@ -2,7 +2,7 @@
 
 A collection of JavaScript examples and projects demonstrating core concepts and practical implementations.
 
-## Project Goals
+## Goals
 
 - Understand fundamental JavaScript concepts
 - Practice DOM manipulation
