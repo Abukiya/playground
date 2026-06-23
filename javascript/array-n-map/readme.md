@@ -4,36 +4,6 @@ This directory contains comprehensive examples and explanations of two fundament
 
 ## Files Overview
 
-### 📄 array.js
-Explores the fundamentals of JavaScript Arrays with practical examples:
-
-**Topics Covered:**
-- Creating arrays (literals, constructor)
-- Accessing array elements
-- Array properties (length)
-- Modifying elements
-- Common array methods:
-  - `push()` - adds element at end
-  - `pop()` - removes last element
-  - `unshift()` - adds element at beginning
-  - `shift()` - removes first element
-  - `includes()` - checks if element exists
-  - `indexOf()` - finds element index
-  - `forEach()` - iterates over elements
-  - `map()` - transforms elements
-  - `filter()` - filters elements
-  - `slice()` - extracts portion of array
-  - `join()` - combines elements into string
-- Spread operator (`...`)
-- Array destructuring
-
-**Quick Example:**
-```javascript
-const fruits = ['apple', 'banana', 'orange'];
-fruits.push('grape');
-console.log(fruits); // ['apple', 'banana', 'orange', 'grape']
-```
-
 ### 📄 map.js
 Explores the fundamentals of JavaScript Maps with practical examples:
 
@@ -73,42 +43,7 @@ console.log(map.get('name')); // 'John'
 
 ## Running the Examples
 
-**Run array examples:**
-```bash
-node array.js
-```
-
 **Run map examples:**
 ```bash
 node map.js
 ```
-
-**Run both:**
-```bash
-node array.js && node map.js
-```
-
-## When to Use Each
-
-### Use Arrays When:
-- You need an ordered collection of items
-- You need to access elements by numeric index
-- You want to use array methods like `map()`, `filter()`, `reduce()`
-- Working with lists (todo items, comments, products, etc.)
-
-### Use Maps When:
-- You need key-value associations
-- Keys are not just strings or numbers
-- You need to check key existence efficiently
-- You need to store metadata or configurations
-- Objects keys don't suffice (need non-string keys)
-
-## Learning Resources
-
-These examples serve as a foundation for understanding:
-- Data structure selection
-- Performance implications
-- Real-world application patterns
-- Modern JavaScript conventions
-
-Experiment with the code by modifying the examples and running them to see the outputs!
