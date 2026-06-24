@@ -24,7 +24,6 @@ let result=""
 words.forEach(myFunction);
 
 
-
 function myFunction(value, index, array) {
     for (let i = 0; i < value.length; i++) {
         words_wight+=alphabet_wight_map.get(value[i]);
