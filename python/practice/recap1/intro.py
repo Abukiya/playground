@@ -160,6 +160,7 @@ print(multiline_text)
 text = "Hello, World!"
 print(text[2:5])
 print(text[-5:-2])
+print(text[::-1])  # Reverse the string
 
 # -------------------------------------------------
 # Concatenating strings

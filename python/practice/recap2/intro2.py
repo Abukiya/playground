@@ -72,7 +72,9 @@ numbers.insert(1, 99)
 print("Updated list:", numbers)
 print("First item:", numbers[0])
 print("Last item:", numbers[-1])
+print("reverse:", numbers[::-1])
 print("Slice:", numbers[1:3])
+
 
 # -------------------------------------------------
 # Tuples
