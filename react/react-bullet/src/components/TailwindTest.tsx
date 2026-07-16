@@ -1,9 +1,13 @@
-
+import { Button, HStack } from "@chakra-ui/react"
 export default function TailwindTest() {
   return (
-    <button className="w-48 h-48 bg-blue-500 hover:bg-blue-700 text-red-500 font-bold py-2 px-4 rounded hover:scale-400">
-      Click Me
-    </button>
-
+    <HStack wrap="wrap" gap="6">
+      <Button variant="solid" rounded="full"colorPalette="blue">Solid</Button>
+      <Button variant="subtle"colorPalette="blue">Subtle</Button>
+      <Button variant="surface"colorPalette="blue">Surface</Button>
+      <Button variant="outline" colorPalette="blue">Outline</Button>
+      <Button variant="ghost">Ghost</Button>
+      <Button variant="plain" >Plain</Button>
+    </HStack>
   )
 }
