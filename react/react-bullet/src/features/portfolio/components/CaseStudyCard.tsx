@@ -8,24 +8,24 @@ interface CaseStudyCardProps {
 
 export function CaseStudyCard({ study }: CaseStudyCardProps) {
   return (
-    <article className="rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md">
+    <article className="rounded-xl border border-brand-black bg-brand-black shadow-sm transition-shadow hover:shadow-md">
       <div className="p-6">
-        <div className="flex items-center gap-2 text-sm text-gray-500">
-          <span className="rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-700">
+        <div className="flex items-center gap-2 text-sm text-brand-yellow/70">
+          <span className="rounded-full bg-brand-yellow px-2.5 py-0.5 text-xs font-medium text-brand-black">
             {study.service}
           </span>
           <span>{study.industry}</span>
         </div>
 
-        <h3 className="mt-3 text-xl font-semibold text-gray-900">{study.title}</h3>
+        <h3 className="mt-3 text-xl font-semibold text-brand-yellow">{study.title}</h3>
 
-        <p className="mt-1 text-sm font-medium text-blue-600">{study.client}</p>
+        <p className="mt-1 text-sm font-medium text-brand-yellow/80">{study.client}</p>
 
-        <p className="mt-3 text-gray-600">{study.summary}</p>
+        <p className="mt-3 text-brand-yellow/70">{study.summary}</p>
 
         <Link
           to={`/portfolio/${study.id}`}
-          className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-700"
+          className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-brand-yellow hover:text-yellow-300"
         >
           Read case study <ArrowRight size={14} aria-hidden="true" />
         </Link>

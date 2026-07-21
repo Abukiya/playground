@@ -8,7 +8,7 @@ export function PortfolioPage() {
   const items = getPortfolioItems()
 
   return (
-    <Section background="gray">
+    <Section background="white">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <Heading>Our Work</Heading>

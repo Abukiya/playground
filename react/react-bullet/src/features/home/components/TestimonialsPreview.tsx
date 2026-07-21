@@ -42,13 +42,13 @@ export function TestimonialsPreview() {
           {testimonials.map((t) => (
             <blockquote
               key={t.name}
-              className="rounded-xl border border-gray-200 bg-white p-8"
+              className="rounded-xl border border-gray-200 bg-brand-black p-8"
             >
-              <p className="text-gray-700">&ldquo;{t.quote}&rdquo;</p>
+              <p className="text-brand-yellow/80">&ldquo;{t.quote}&rdquo;</p>
               <footer className="mt-6">
                 <cite className="not-italic">
-                  <span className="font-semibold text-gray-900">{t.name}</span>
-                  <span className="block text-sm text-gray-500">
+                  <span className="font-semibold text-brand-yellow">{t.name}</span>
+                  <span className="block text-sm text-brand-yellow/60">
                     {t.role}{t.company ? `, ${t.company}` : ''}
                   </span>
                 </cite>

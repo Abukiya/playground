@@ -12,10 +12,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const buttonVariants = {
   base: 'inline-flex items-center justify-center rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
   variants: {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-500',
-    secondary: 'bg-gray-800 text-white hover:bg-gray-900 focus-visible:ring-gray-500',
-    outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus-visible:ring-blue-500',
-    ghost: 'text-gray-600 hover:bg-gray-100 focus-visible:ring-gray-400',
+    primary: 'bg-brand-yellow text-brand-black hover:bg-yellow-400 focus-visible:ring-brand-yellow',
+    secondary: 'bg-brand-black text-brand-yellow hover:bg-gray-900 focus-visible:ring-brand-yellow',
+    outline: 'border-2 border-brand-black text-brand-black hover:bg-brand-black hover:text-brand-yellow focus-visible:ring-brand-yellow',
+    ghost: 'text-brand-black hover:bg-brand-yellow hover:text-brand-black focus-visible:ring-brand-yellow',
   } as const,
   sizes: {
     sm: 'px-3 py-1.5 text-sm',

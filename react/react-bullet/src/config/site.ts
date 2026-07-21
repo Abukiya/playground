@@ -1,6 +1,6 @@
 export const SITE = {
   name: 'C-Tech',
-  tagline: 'Innovative Solutions for the Digital Age',
+  tagline: 'Beyond Serving!',
   description:
     'C-Tech is a full-service agency offering software development, digital marketing, and premium printing services in Ethiopia.',
   url: 'https://ctech.et',

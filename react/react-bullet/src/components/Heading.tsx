@@ -8,10 +8,10 @@ interface HeadingProps {
 }
 
 const styles = {
-  h1: 'text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl',
-  h2: 'text-3xl font-bold tracking-tight sm:text-4xl',
-  h3: 'text-2xl font-semibold sm:text-3xl',
-  h4: 'text-xl font-semibold',
+  h1: 'font-display text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl',
+  h2: 'font-display text-3xl font-bold tracking-tight sm:text-4xl',
+  h3: 'font-display text-2xl font-semibold sm:text-3xl',
+  h4: 'font-display text-xl font-semibold',
 }
 
 export function Heading({ as: Tag = 'h2', className, children }: HeadingProps) {

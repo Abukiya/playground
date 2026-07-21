@@ -17,7 +17,7 @@ export function CaseStudyDetail() {
       <Container>
         <Link
           to="/portfolio"
-          className="inline-flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-blue-600"
+          className="inline-flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-brand-black"
         >
           <ArrowLeft size={14} aria-hidden="true" />
           Back to portfolio
@@ -25,7 +25,7 @@ export function CaseStudyDetail() {
 
         <div className="mt-8 max-w-3xl">
           <div className="flex items-center gap-2 text-sm text-gray-500">
-            <span className="rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-700">
+            <span className="rounded-full bg-brand-yellow px-2.5 py-0.5 text-xs font-medium text-brand-black">
               {study.service}
             </span>
             <span>{study.industry}</span>
@@ -35,7 +35,7 @@ export function CaseStudyDetail() {
             {study.title}
           </Heading>
 
-          <p className="mt-2 text-lg font-medium text-blue-600">{study.client}</p>
+          <p className="mt-2 text-lg font-medium text-brand-black">{study.client}</p>
 
           <p className="mt-6 text-lg leading-relaxed text-gray-600">{study.summary}</p>
 
@@ -44,7 +44,7 @@ export function CaseStudyDetail() {
               href={study.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-700"
+              className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-brand-black hover:text-brand-yellow"
             >
               Visit website <ExternalLink size={14} aria-hidden="true" />
             </a>
@@ -66,7 +66,7 @@ export function CaseStudyDetail() {
               <ul className="mt-3 space-y-3">
                 {study.results.map((result) => (
                   <li key={result} className="flex items-start gap-3 text-gray-600">
-                    <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-green-500" aria-hidden="true" />
+                    <span className="mt-0.5 flex-shrink-0 text-brand-yellow" aria-hidden="true">▶</span>
                     {result}
                   </li>
                 ))}

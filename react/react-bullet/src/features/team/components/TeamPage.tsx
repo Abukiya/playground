@@ -8,11 +8,11 @@ export function TeamPage() {
   const members = getTeamMembers()
 
   return (
-    <Section background="gray">
+    <Section background="dark">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <Heading>Our Team</Heading>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-brand-yellow/70">
             The people behind C-Tech, working to deliver excellence.
           </p>
         </div>

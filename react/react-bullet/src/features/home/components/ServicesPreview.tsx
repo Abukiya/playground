@@ -35,7 +35,7 @@ export function ServicesPreview() {
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <Heading>What We Do</Heading>
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-brand-black/70">
             Three service lines, one mission — helping your business thrive.
           </p>
         </div>
@@ -47,15 +47,15 @@ export function ServicesPreview() {
               <Link
                 key={service.title}
                 to={service.href}
-                className="group rounded-xl bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
+                className="group rounded-xl bg-brand-black p-8 shadow-sm transition-shadow hover:shadow-md"
               >
-                <div className="inline-flex rounded-lg bg-blue-100 p-3 text-blue-600">
+                <div className="inline-flex rounded-lg bg-brand-yellow p-3 text-brand-black">
                   <Icon size={28} aria-hidden="true" />
                 </div>
-                <h3 className="mt-4 text-xl font-semibold text-gray-900">
+                <h3 className="mt-4 text-xl font-semibold text-brand-yellow">
                   {service.title}
                 </h3>
-                <p className="mt-2 text-gray-600">{service.description}</p>
+                <p className="mt-2 text-brand-yellow/70">{service.description}</p>
               </Link>
             )
           })}

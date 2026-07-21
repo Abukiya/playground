@@ -10,8 +10,8 @@ interface SectionProps {
 
 const backgrounds = {
   white: 'bg-white',
-  gray: 'bg-gray-50',
-  dark: 'bg-gray-900 text-white',
+  gray: 'bg-brand-yellow',
+  dark: 'bg-brand-black text-brand-yellow',
 }
 
 export function Section({

@@ -9,11 +9,11 @@ export function ServicesPage() {
 
   return (
     <>
-      <Section background="white">
+      <Section background="gray">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <Heading>Our Services</Heading>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-lg text-brand-black/70">
               Three service lines engineered to help your business grow.
             </p>
           </div>
