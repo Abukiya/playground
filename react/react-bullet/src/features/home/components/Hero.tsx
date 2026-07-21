@@ -23,7 +23,7 @@ export function Hero() {
               <Link to="/services">Our Services</Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link to="/contact" className="border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-brand-black">
+              <Link to="/contact">
                 Contact Us
               </Link>
             </Button>

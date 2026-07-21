@@ -14,7 +14,7 @@ export const buttonVariants = {
   variants: {
     primary: 'bg-brand-yellow text-brand-black hover:bg-yellow-400 focus-visible:ring-brand-yellow',
     secondary: 'bg-brand-black text-brand-yellow hover:bg-gray-900 focus-visible:ring-brand-yellow',
-    outline: 'border-2 border-brand-black text-brand-black hover:bg-brand-black hover:text-brand-yellow focus-visible:ring-brand-yellow',
+    outline: 'border-2 border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-brand-black  focus-visible:ring-brand-yellow',
     ghost: 'text-brand-black hover:bg-brand-yellow hover:text-brand-black focus-visible:ring-brand-yellow',
   } as const,
   sizes: {
