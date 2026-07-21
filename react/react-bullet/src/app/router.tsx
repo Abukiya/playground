@@ -1,12 +1,11 @@
 import { Routes, Route } from 'react-router-dom'
 import { Layout } from '@/components/Layout'
 import { HomePage } from '@/features/home/components/HomePage'
-
-const ServicesPage = () => <div>Services</div>
-const PortfolioPage = () => <div>Portfolio</div>
-const PortfolioDetailPage = () => <div>Case Study</div>
-const TeamPage = () => <div>Team</div>
-const ContactPage = () => <div>Contact</div>
+import { ServicesPage } from '@/features/services/components/ServicesPage'
+import { PortfolioPage } from '@/features/portfolio/components/PortfolioPage'
+import { CaseStudyDetail } from '@/features/portfolio/components/CaseStudyDetail'
+import { TeamPage } from '@/features/team/components/TeamPage'
+import { ContactPage } from '@/features/contact/components/ContactPage'
 
 export function AppRouter() {
   return (
@@ -15,7 +14,7 @@ export function AppRouter() {
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
-        <Route path="/portfolio/:id" element={<PortfolioDetailPage />} />
+        <Route path="/portfolio/:id" element={<CaseStudyDetail />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Route>
