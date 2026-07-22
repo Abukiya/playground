@@ -59,7 +59,7 @@ export function ContactForm() {
         placeholder="How can we help you?"
         aria-required="true"
       />
-      <Button type="submit" disabled={loading}>
+      <Button type="submit" variant="secondary" disabled={loading}>
         {loading ? 'Sending...' : 'Send Message'}
       </Button>
     </form>
