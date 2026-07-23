@@ -1,8 +1,18 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { NAV_LINKS, SITE } from '@/config/site'
 import { cn } from '@/utils/cn'
+
+const fadeUpStagger = {
+  hidden: { opacity: 0, y: 28 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  }),
+}
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -57,27 +67,43 @@ export function Header() {
         </button>
       </div>
 
-      {open && (
-        <nav className="absolute left-0 right-0 top-full z-50 border-t border-brand-yellow/20 bg-brand-black/80 px-4 pb-4 pt-2 shadow-xl backdrop-blur-lg md:hidden" aria-label="Mobile navigation">
-          {NAV_LINKS.map((link) => (
-            <NavLink
-              key={link.href}
-              to={link.href}
-              onClick={() => setOpen(false)}
-              className={({ isActive }) =>
-                cn(
-                  'block rounded-md px-3 py-2 text-base font-medium transition-colors',
-                  isActive
-                    ? 'bg-brand-yellow text-brand-black'
-                    : 'text-brand-yellow/70 hover:bg-brand-yellow/10 hover:text-brand-yellow',
-                )
-              }
-            >
-              {link.label}
-            </NavLink>
-          ))}
-        </nav>
-      )}
+      <AnimatePresence>
+        {open && (
+          <motion.nav
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute left-0 right-0 top-full z-50 overflow-hidden border-t border-brand-yellow/20 bg-brand-black/80 px-4 pb-4 pt-2 shadow-xl backdrop-blur-lg md:hidden"
+            aria-label="Mobile navigation"
+          >
+            {NAV_LINKS.map((link, index) => (
+              <motion.div
+                key={link.href}
+                variants={fadeUpStagger}
+                initial="hidden"
+                animate="visible"
+                custom={index}
+              >
+                <NavLink
+                  to={link.href}
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    cn(
+                      'block rounded-md px-3 py-2 text-base font-medium transition-colors',
+                      isActive
+                        ? 'bg-brand-yellow text-brand-black'
+                        : 'text-brand-yellow/70 hover:bg-brand-yellow/10 hover:text-brand-yellow',
+                    )
+                  }
+                >
+                  {link.label}
+                </NavLink>
+              </motion.div>
+            ))}
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </header>
   )
 }
