@@ -6,7 +6,7 @@ import { SITE } from '@/config/site'
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-brand-black py-24 text-brand-yellow sm:py-32">
+    <section className="relative overflow-hidden py-24 text-brand-yellow sm:py-32 bg-[url('/hero-bg.png')] bg-cover bg-center">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-block rounded-full bg-brand-yellow px-4 py-1 text-xs font-bold uppercase tracking-widest text-brand-black">
