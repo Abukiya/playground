@@ -9,7 +9,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-brand-yellow/20 bg-brand-black">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link to="/" className="group flex flex-col leading-none">
           <span className="font-display text-2xl font-extrabold tracking-tight text-brand-yellow">
             C-TECH
@@ -49,7 +49,7 @@ export function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-brand-yellow/20 bg-brand-black px-4 pb-4 pt-2 md:hidden" aria-label="Mobile navigation">
+        <nav className="absolute left-0 right-0 top-full z-50 border-t border-brand-yellow/20 bg-brand-black/80 px-4 pb-4 pt-2 shadow-xl backdrop-blur-lg md:hidden" aria-label="Mobile navigation">
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.href}
