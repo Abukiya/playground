@@ -57,14 +57,17 @@ export function Header() {
           ))}
         </nav>
 
-        <button
+        <motion.button
           className="text-brand-yellow md:hidden"
           onClick={() => setOpen(!open)}
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
+          whileHover={{ scale: 1.1, opacity: 0.8 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ duration: 0.2 }}
         >
           {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        </motion.button>
       </div>
 
       <AnimatePresence>

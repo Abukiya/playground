@@ -1,23 +1,11 @@
-import { motion } from "motion/react"
-
-
-export default function Rotate() {
+import Rotate from './components/Rotate';
+import Navbar from './components/Navbar.'
+export default function App() {
     return (
-        <motion.div
-            style={box}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 1 }}
-        />
+        <div>
+          <h1 className="text-3xl font-bold underline">Hello, World!</h1>
+          <Rotate/>
+          <Navbar />
+       </div>
     )
-}
-
-/**
- * ==============   Styles   ================
- */
-
-const box = {
-    width: 100,
-    height: 100,
-    backgroundColor: "var(--hue-1)",
-    borderRadius: 5,
-}
+};
