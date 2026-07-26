@@ -25,7 +25,7 @@ import { motion, AnimatePresence } from "motion/react"
 **15-min review:** Without looking at docs, write from memory: the three core props on `motion.div`, the difference between spring and tween, and how you'd animate opacity + y-position on mount. Then check yourself against Session 1 material.
 
 **✅ Checklist — don't move on until you can do all of these (docs closed):**
-- [ ] Turn a plain `<div>` into an animated one that fades and slides up on mount, no copy-paste
+- [x] Turn a plain `<div>` into an animated one that fades and slides up on mount, no copy-paste
 - [ ] Explain in one sentence when you'd use `type: "spring"` vs `type: "tween"`
 - [ ] Animate a button's scale on click using state + `animate`, from a blank file
 - [ ] Name what `initial`, `animate`, and `transition` each control, without hesitating
