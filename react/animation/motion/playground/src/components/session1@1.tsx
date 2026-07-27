@@ -6,6 +6,7 @@ export default function Fadenslide(){
         <motion.div className ="h-30 w-30 bg-blue-600 justify-center flex items-center "
         initial={{opacity:0, y:90}}
         animate={{opacity:1, y:0,transition:{duration:1}}}
+        onHoverEnd={()=>{alert("hello world")}}
         >
             <p>
                 hi
@@ -13,7 +14,7 @@ export default function Fadenslide(){
 
         </motion.div>
 
-        <motion.div className ="h-30 w-30 bg-blue-600 justify-center flex items-center "
+        <motion.div drag className =" h-30 w-30 bg-blue-600 justify-center flex items-center "
         initial={{opacity:0, y:90}}
         animate={{opacity:1, y:0,transition:{duration:1,}}}
         

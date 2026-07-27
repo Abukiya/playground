@@ -7,5 +7,5 @@ import Variants from './components/variantnorchasrating';
 
 
 export default function App() {
-    return <OnclickScale />;
+    return <GesturesAndDrag />;
 }
