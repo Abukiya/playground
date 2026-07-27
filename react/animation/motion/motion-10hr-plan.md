@@ -26,9 +26,9 @@ import { motion, AnimatePresence } from "motion/react"
 
 **✅ Checklist — don't move on until you can do all of these (docs closed):**
 - [x] Turn a plain `<div>` into an animated one that fades and slides up on mount, no copy-paste
-- [ ] Explain in one sentence when you'd use `type: "spring"` vs `type: "tween"`
-- [ ] Animate a button's scale on click using state + `animate`, from a blank file
-- [ ] Name what `initial`, `animate`, and `transition` each control, without hesitating
+- [x] Explain in one sentence when you'd use `type: "spring"` vs `type: "tween"`
+- [x] Animate a button's scale on click using state + `animate`, from a blank file
+- [x] Name what `initial`, `animate`, and `transition` each control, without hesitating
 
 ---
 
