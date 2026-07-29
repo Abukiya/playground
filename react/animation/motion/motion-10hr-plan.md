@@ -44,10 +44,10 @@ import { motion, AnimatePresence } from "motion/react"
 **15-min review:** Explain out loud (or write) how stagger propagation works — why does setting `staggerChildren` on the parent variant animate the children in sequence? Rebuild the staggered list from memory, no copy-paste.
 
 **✅ Checklist — don't move on until you can do all of these (docs closed):**
-- [ ] Build a staggered list from scratch: parent variant + child variants + `staggerChildren`
+- [x] Build a staggered list from scratch: parent variant + child variants + `staggerChildren`
 - [ ] Explain why children need their own `variants` prop (not just the parent) to pick up the stagger
-- [ ] Add `whileHover` and `whileTap` to a card without looking anything up
-- [ ] Make an element draggable within bounds using `drag` + `dragConstraints`
+- [x] Add `whileHover` and `whileTap` to a card without looking anything up
+- [x] Make an element draggable within bounds using `drag` + `dragConstraints`
 
 ---
 
