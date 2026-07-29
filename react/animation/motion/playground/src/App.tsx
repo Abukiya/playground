@@ -5,9 +5,10 @@ import Menu from './components/session2@1';
 import OnclickScale from './components/variantnorchasrating';
 import Variants from './components/variantnorchasrating';
 import Animate_pressence from './components/animatepressence';
+import Flip from './components/flip';
 
 
 
 export default function App() {
-    return <Animate_pressence />;
+    return <Flip />;
 }

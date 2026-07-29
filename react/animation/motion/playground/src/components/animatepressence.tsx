@@ -4,8 +4,11 @@ import {useState } from "react"
 export default function Animate_pressence(){
     const [isvisible,setisvisble] = useState(false)
     const modalVariants = {
-        visible: { opacity: 1,scale:1, transition: { when: "beforeChildren" } },
-        hidden: { opacity: 0,scale:0, transition: { when: "afterChildren" } }
+        visible: { opacity: 1,scale:1,
+            ease: "sync",
+         },
+        hidden: { opacity: 0,scale:0,ease: "sync"}
+
 }
 
     return(
