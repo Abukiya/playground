@@ -1,8 +1,12 @@
-import {motion,AnimatePresence} from "motion/react"
+import {motion,AnimatePresence, scale} from "motion/react"
 import {useState } from "react"
 
 export default function Animate_pressence(){
     const [isvisible,setisvisble] = useState(false)
+    const modalVariants = {
+        visible: { opacity: 1,scale:1, transition: { when: "beforeChildren" } },
+        hidden: { opacity: 0,scale:0, transition: { when: "afterChildren" } }
+}
 
     return(
         <div
@@ -12,9 +16,10 @@ export default function Animate_pressence(){
                 {
                     isvisible?
                     <motion.div 
-                    initial={{opacity:0,scale:0}}
-                    animate={{opacity:1,scale:1}}
-                    exit={{opacity:0,scale:0}}
+                    variants={modalVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
                     transition={{duration:0.5}}
                     className="box w-20 h-20 bg-blue-700 rounded-md justify-center items-center flex text-white">
                         hello
