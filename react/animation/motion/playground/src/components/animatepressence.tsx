@@ -27,8 +27,8 @@ export default function Animate_pressence(){
                     className="box w-20 h-20 bg-blue-700 rounded-md justify-center items-center flex text-white">
                         hello
 
-                    </motion.div>:
-                    null
+                    </motion.div>
+                    :null
                 }
 
             </AnimatePresence>

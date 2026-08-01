@@ -6,9 +6,12 @@ import OnclickScale from './components/variantnorchasrating';
 import Variants from './components/variantnorchasrating';
 import Animate_pressence from './components/animatepressence';
 import Flip from './components/flip';
+import Saredlayout from './components/sharedlayoutcard';
+import Timer from './components/UseRef';
+
 
 
 
 export default function App() {
-    return <Flip />;
+    return <Saredlayout />;
 }
