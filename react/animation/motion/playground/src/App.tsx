@@ -8,10 +8,12 @@ import Animate_pressence from './components/animatepressence';
 import Flip from './components/flip';
 import Saredlayout from './components/sharedlayoutcard';
 import Timer from './components/UseRef';
+import SharedLayoutAnimation from "./components/Navbar."
+import Navbar from './components/navbar';
 
 
 
 
 export default function App() {
-    return <Saredlayout />;
+    return <Navbar />;
 }
