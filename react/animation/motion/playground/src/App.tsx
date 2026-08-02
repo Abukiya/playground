@@ -10,10 +10,12 @@ import Saredlayout from './components/sharedlayoutcard';
 import Timer from './components/UseRef';
 import SharedLayoutAnimation from "./components/Navbar."
 import Navbar from './components/navbar';
+import ScrollLinked from "./components/scroll_linked"
+import ScrollTriggered from './components/scroll-triggered';
 
 
 
 
 export default function App() {
-    return <Navbar />;
+    return <ScrollTriggered />;
 }

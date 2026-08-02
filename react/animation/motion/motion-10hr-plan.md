@@ -63,10 +63,10 @@ import { motion, AnimatePresence } from "motion/react"
 **15-min review:** Write a one-paragraph explanation (as if to a teammate) of when you'd reach for `AnimatePresence` vs the `layout` prop vs both together. This distinction trips people up — nailing it now saves debugging later.
 
 **✅ Checklist — don't move on until you can do all of these (docs closed):**
-- [ ] Build a modal that animates in on mount AND out on close (not just in)
-- [ ] Explain why exit animations need `AnimatePresence` but enter animations don't
-- [ ] Add `layout` to a list item and describe what breaks if you forget it on a reordering list
-- [ ] Set up one shared-element transition using matching `layoutId` on two different components
+- [x] Build a modal that animates in on mount AND out on close (not just in)
+- [x] Explain why exit animations need `AnimatePresence` but enter animations don't
+- [x] Add `layout` to a list item and describe what breaks if you forget it on a reordering list
+- [x] Set up one shared-element transition using matching `layoutId` on two different components
 
 ---
 
