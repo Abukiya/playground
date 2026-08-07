@@ -4,8 +4,11 @@ import { Container } from '@/components/Container'
 import { Section } from '@/components/Section'
 import { Heading } from '@/components/Heading'
 import { Button } from '@/components/Button'
+import { motion } from 'motion/react'
+import ServiceCard from './ServiceCard'
+import type { Service } from '../types'
 
-const services = [
+const services: Service[] = [
   {
     icon: Code,
     title: 'Tech Innovation Hub',
@@ -40,27 +43,23 @@ export function ServicesPreview() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          className="mt-12 grid grid-cols-1 gap-8 justify-items-center max-w-3xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            visible: {
+              transition: { staggerChildren: 0.3 }
+            }
+          }}
+        >
           {services.map((service) => {
-            const Icon = service.icon
             return (
-              <Link
-                key={service.title}
-                to={service.href}
-                className="group rounded-xl bg-brand-black p-8 shadow-sm transition-shadow hover:shadow-md"
-              >
-                <div className="inline-flex rounded-lg bg-brand-yellow p-3 text-brand-black">
-                  <Icon size={28} aria-hidden="true" />
-                </div>
-                <h3 className="mt-4 text-xl font-semibold text-brand-yellow">
-                  {service.title}
-                </h3>
-                <p className="mt-2 text-brand-yellow/70">{service.description}</p>
-              </Link>
+              <ServiceCard key={service.title} service={service} />
             )
           })}
-        </div>
-
+        </motion.div>
         <div className="mt-10 text-center">
           <Button asChild>
             <Link to="/services">View All Services</Link>

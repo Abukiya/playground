@@ -4,3 +4,10 @@ export interface Testimonial {
   role: string
   company?: string
 }
+
+export interface Service {
+  icon: React.ComponentType<{ size?: number; className?: string }>
+  title: string
+  description: string
+  href: string
+}
