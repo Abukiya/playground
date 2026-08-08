@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'motion/react'
 import { NAV_LINKS, SITE } from '@/config/site'
 import { cn } from '@/utils/cn'
 
@@ -10,7 +10,7 @@ const fadeUpStagger = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    transition: { delay: i * 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
   }),
 }
 
@@ -33,7 +33,6 @@ export function Header() {
             </span>
           </span>
           <span className="pl-[.65rem] text-[11px] font-semibold tracking-[0.2em] text-brand-yellow/70">
-            <span className="sr-only">C-Tech</span>
             TECHNOLOGIES
           </span>
         </Link>
