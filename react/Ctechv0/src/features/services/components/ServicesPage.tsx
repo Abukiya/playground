@@ -9,7 +9,7 @@ export function ServicesPage() {
 
   return (
     <>
-      <Section background="gray">
+      <Section background="yellow">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <Heading>Our Services</Heading>

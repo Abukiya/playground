@@ -5,12 +5,12 @@ interface SectionProps {
   id?: string
   className?: string
   children: ReactNode
-  background?: 'white' | 'gray' | 'dark'
+  background?: 'white' | 'yellow' | 'dark'
 }
 
 const backgrounds = {
   white: 'bg-white',
-  gray: 'bg-brand-yellow',
+  yellow: 'bg-brand-yellow',
   dark: 'bg-brand-black text-brand-yellow',
 }
 
