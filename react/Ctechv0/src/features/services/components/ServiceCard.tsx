@@ -1,5 +1,6 @@
 import { Code, TrendingUp, Printer } from 'lucide-react'
 import type { Service } from '@/features/services/types'
+import {motion} from 'motion/react'
 
 const iconMap = { Code, TrendingUp, Printer } as const
 
@@ -10,8 +11,14 @@ interface ServiceCardProps {
 export function ServiceCard({ service }: ServiceCardProps) {
   const Icon = iconMap[service.icon as keyof typeof iconMap]
 
+  const serviceCardVariant ={
+    hidden:{opacity:0, y:50},
+    visible:{opacity:1, y:0, transition:{ duration:.5}}
+  }
+
   return (
-    <article className="rounded-xl border border-brand-black bg-brand-black p-8 shadow-sm">
+    <motion.article className="rounded-xl border border-brand-black bg-brand-black p-8 shadow-sm"
+    variants={serviceCardVariant}>
       <div className="inline-flex rounded-lg bg-brand-yellow p-3 text-brand-black">
         <Icon size={32} aria-hidden="true" />
       </div>
@@ -27,6 +34,6 @@ export function ServiceCard({ service }: ServiceCardProps) {
           </li>
         ))}
       </ul>
-    </article>
+    </motion.article>
   )
 }
