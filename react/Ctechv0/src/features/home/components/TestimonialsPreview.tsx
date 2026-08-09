@@ -1,7 +1,9 @@
-import { Container } from '@/components/Container'
-import { Section } from '@/components/Section'
-import { Heading } from '@/components/Heading'
-import type { Testimonial } from '@/features/home/types'
+import { Container } from '@/components/Container';
+import { Section } from '@/components/Section';
+import { Heading } from '@/components/Heading';
+import type { Testimonial } from '@/features/home/types';
+import { easeInOut, motion } from 'motion/react';
+import { view } from 'motion/react-client';
 
 const testimonials: Testimonial[] = [
   {
@@ -25,38 +27,64 @@ const testimonials: Testimonial[] = [
     role: 'Operations Manager',
     company: 'Addis Print Co.',
   },
-]
+];
 
 export function TestimonialsPreview() {
+  const itemVaraints = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transation: { duration: 0.5 } },
+  };
   return (
     <Section background="white">
       <Container>
-        <div className="mx-auto max-w-2xl text-center">
-          <Heading>What Our Clients Say</Heading>
-          <p className="mt-4 text-gray-600">
-            Trusted by businesses across Ethiopia.
-          </p>
-        </div>
-
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
-          {testimonials.map((t) => (
-            <blockquote
-              key={t.name}
-              className="rounded-xl border border-gray-200 bg-brand-black p-8"
-            >
-              <p className="text-brand-yellow/80">&ldquo;{t.quote}&rdquo;</p>
-              <footer className="mt-6">
-                <cite className="not-italic">
-                  <span className="font-semibold text-brand-yellow">{t.name}</span>
-                  <span className="block text-sm text-brand-yellow/60">
-                    {t.role}{t.company ? `, ${t.company}` : ''}
-                  </span>
-                </cite>
-              </footer>
-            </blockquote>
-          ))}
-        </div>
+        <motion.div
+        initial ="hidden"
+        whileInView ="visible"
+        viewport={{once:true}}
+        variants={{
+          hidden:{},
+          visible:{transition:{staggerChildren:.2}}
+        }}>
+          <motion.div className="mx-auto max-w-2xl text-center"
+          variants={{
+            hidden:{opacity:0, y:20},
+            visible:{opacity:1,y:0,transition:{duration:0.5, ease:easeInOut}}
+          }}>
+            <Heading>What Our Clients Say</Heading>
+            <p className="mt-4 text-gray-600">
+              Trusted by businesses across Ethiopia.
+            </p>
+          </motion.div>
+          <motion.div
+            className="mt-12 grid gap-8 md:grid-cols-3"
+            variants={{ 
+              hidden: {},
+              visible:{transition:{staggerChildren:.2}}
+          }}
+          >
+            {testimonials.map((t) => (
+              <motion.blockquote
+                key={t.name}
+                className="rounded-xl border border-gray-200 bg-brand-black p-8"
+                variants={itemVaraints}
+              >
+                <p className="text-brand-yellow/80">&ldquo;{t.quote}&rdquo;</p>
+                <footer className="mt-6">
+                  <cite className="not-italic">
+                    <span className="font-semibold text-brand-yellow">
+                      {t.name}
+                    </span>
+                    <span className="block text-sm text-brand-yellow/60">
+                      {t.role}
+                      {t.company ? `, ${t.company}` : ''}
+                    </span>
+                  </cite>
+                </footer>
+              </motion.blockquote>
+            ))}
+          </motion.div>
+        </motion.div>
       </Container>
     </Section>
-  )
+  );
 }
