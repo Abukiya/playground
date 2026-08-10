@@ -1,42 +1,69 @@
-import { Container } from '@/components/Container'
-import { Section } from '@/components/Section'
-import { Heading } from '@/components/Heading'
-import { ContactForm } from '@/features/contact/components/ContactForm'
-import { DemoRequestForm } from '@/features/contact/components/DemoRequestForm'
+import { Container } from '@/components/Container';
+import { Section } from '@/components/Section';
+import { Heading } from '@/components/Heading';
+import { ContactForm } from '@/features/contact/components/ContactForm';
+import { easeOut, motion } from 'motion/react';
+
+const varaints = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease:"easeOut" } },
+};
 
 export function ContactPage() {
   return (
-      <Section background="yellow">
-        <Container>
-          <div className="mx-auto max-w-2xl text-center">
-            <Heading>Get in Touch</Heading>
-            <p className="mt-4 text-lg text-brand-black/70">
+    <Section background="white">
+      <Container>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.2 } },
+          }}
+        >
+          <motion.div
+            className="mx-auto max-w-2xl text-center"
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: 0.15 } },
+            }}
+          >
+            <motion.div variants={varaints}>
+              <Heading>Get in Touch</Heading>
+            </motion.div>
+            <motion.p
+              className="mt-4 text-lg text-brand-black/70"
+              variants={varaints}
+            >
               Have a project in mind? We&apos;d love to hear from you.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
-          <div className="mt-16 grid gap-12 lg:grid-cols-2">
-            <div>
-              <h2 className="font-display text-2xl font-bold text-brand-black">Send us a message</h2>
-              <p className="mt-2 text-brand-black/70">
+          <motion.div className="mt-16 flex justify-center">
+            <motion.div
+              className="w-full md:w-3xl"
+              variants={{
+                hidden: {},
+                visible: { transition: { staggerChildren: 0.15 } },
+              }}
+            >
+              <motion.h2
+                className="font-display text-2xl font-bold text-brand-black mb-6"
+                variants={varaints}
+              >
+                Send us a message
+              </motion.h2>
+              <motion.p
+                className="mt-2 text-brand-black/70"
+                variants={varaints}
+              >
                 General inquiries, questions, or just want to say hello.
-              </p>
-              <div className="mt-6">
-                <ContactForm />
-              </div>
-            </div>
-
-            <div>
-              <h2 className="font-display text-2xl font-bold text-brand-black">Request a demo</h2>
-              <p className="mt-2 text-brand-black/70">
-                See our products and services in action with a personalized demo.
-              </p>
-              <div className="mt-6">
-                <DemoRequestForm />
-              </div>
-            </div>
-          </div>
-        </Container>
-      </Section>
-  )
+              </motion.p>
+              <ContactForm />
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </Container>
+    </Section>
+  );
 }
