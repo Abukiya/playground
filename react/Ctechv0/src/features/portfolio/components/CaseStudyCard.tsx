@@ -1,14 +1,23 @@
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
-import type { CaseStudy } from '@/features/portfolio/types'
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import type { CaseStudy } from '@/features/portfolio/types';
+import { motion } from 'motion/react';
 
 interface CaseStudyCardProps {
-  study: CaseStudy
+  study: CaseStudy;
 }
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: 'easeOut' } },
+};
 
 export function CaseStudyCard({ study }: CaseStudyCardProps) {
   return (
-    <article className="rounded-xl border border-brand-black bg-brand-black shadow-sm transition-shadow hover:shadow-md">
+    <motion.article
+      className="rounded-xl border border-brand-black bg-brand-black shadow-sm transition-shadow hover:shadow-md"
+      variants={cardVariants}
+    >
       <div className="p-6">
         <div className="flex items-center gap-2 text-sm text-brand-yellow/70">
           <span className="rounded-full bg-brand-yellow px-2.5 py-0.5 text-xs font-medium text-brand-black">
@@ -17,9 +26,13 @@ export function CaseStudyCard({ study }: CaseStudyCardProps) {
           <span>{study.industry}</span>
         </div>
 
-        <h3 className="mt-3 text-xl font-semibold text-brand-yellow">{study.title}</h3>
+        <h3 className="mt-3 text-xl font-semibold text-brand-yellow">
+          {study.title}
+        </h3>
 
-        <p className="mt-1 text-sm font-medium text-brand-yellow/80">{study.client}</p>
+        <p className="mt-1 text-sm font-medium text-brand-yellow/80">
+          {study.client}
+        </p>
 
         <p className="mt-3 text-brand-yellow/70">{study.summary}</p>
 
@@ -30,6 +43,6 @@ export function CaseStudyCard({ study }: CaseStudyCardProps) {
           Read case study <ArrowRight size={14} aria-hidden="true" />
         </Link>
       </div>
-    </article>
-  )
+    </motion.article>
+  );
 }
