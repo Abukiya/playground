@@ -1,23 +1,31 @@
-import { Link } from 'react-router-dom'
-import { motion } from 'motion/react'
-import type { Service } from '../types'
+import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
+import type { Service } from '../types';
 
-const MotionLink = motion.create(Link);
+const MotionLink = motion(Link);
+
+const cardVariants = {
+  hidden: { opacity: 0, x: 100 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+};
+const iconVariants = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+};
 
 export default function ServiceCard({ service }: { service: Service }) {
-
-  const cardVariants = {
-  hidden: { opacity: 0, x: 100 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
-}
-  const iconVariants = {
-  hidden: { opacity: 0, x: -100 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
-}
-
-  const Icon = service.icon
+  const Icon = service.icon;
   return (
-    <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 items-center w-full"
+    <motion.div
+      className="flex flex-col sm:flex-row gap-6 sm:gap-10 items-center w-full"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={{
+        visible: {
+          transition: { staggerChildren: 0.3 },
+        },
+      }}
     >
       <motion.div
         className="inline-flex shrink-0 rounded-lg bg-brand-yellow p-3 text-brand-black"
@@ -36,8 +44,10 @@ export default function ServiceCard({ service }: { service: Service }) {
         <h3 className="mt-4 text-xl font-semibold text-brand-yellow">
           {service.title}
         </h3>
-        <p className="mt-2 text-brand-yellow/70 line-clamp-2">{service.description}</p>
+        <p className="mt-2 text-brand-yellow/70 line-clamp-2">
+          {service.description}
+        </p>
       </MotionLink>
-    </div>
-  )
+    </motion.div>
+  );
 }

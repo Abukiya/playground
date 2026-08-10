@@ -11,8 +11,6 @@ interface ServicesGridProps {
 export function ServicesGrid({ services }: ServicesGridProps) {
   return (
     <motion.div className="grid gap-8 lg:grid-cols-3"
-    initial="hidden"
-    animate="visible"
     variants={{
       visible:{
         transition:{
