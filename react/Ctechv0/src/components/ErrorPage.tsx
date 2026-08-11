@@ -1,7 +1,8 @@
 import { useRouteError, isRouteErrorResponse, Link } from 'react-router-dom'
+
+import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Heading } from '@/components/Heading'
-import { Button } from '@/components/Button'
 
 export function ErrorPage() {
   const error = useRouteError()

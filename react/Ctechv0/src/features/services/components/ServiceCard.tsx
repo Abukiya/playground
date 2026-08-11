@@ -1,6 +1,7 @@
 import { Code, TrendingUp, Printer } from 'lucide-react'
-import type { Service } from '@/features/services/types'
 import {motion} from 'motion/react'
+
+import type { Service } from '@/features/services/types'
 
 const iconMap = { Code, TrendingUp, Printer } as const
 

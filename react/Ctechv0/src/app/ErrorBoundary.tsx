@@ -1,7 +1,8 @@
 import { Component, type ReactNode } from 'react'
-import { Heading } from '@/components/Heading'
-import { Container } from '@/components/Container'
+
 import { Button } from '@/components/Button'
+import { Container } from '@/components/Container'
+import { Heading } from '@/components/Heading'
 
 interface Props {
   children: ReactNode

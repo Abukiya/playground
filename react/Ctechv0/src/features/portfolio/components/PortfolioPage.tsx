@@ -1,9 +1,10 @@
-import { Container } from '@/components/Container';
-import { Section } from '@/components/Section';
-import { Heading } from '@/components/Heading';
-import { PortfolioGrid } from '@/features/portfolio/components/PortfolioGrid';
-import { getPortfolioItems } from '@/features/portfolio/api/getPortfolio';
 import { motion } from 'motion/react';
+
+import { Container } from '@/components/Container';
+import { Heading } from '@/components/Heading';
+import { Section } from '@/components/Section';
+import { getPortfolioItems } from '@/features/portfolio/api/getPortfolio';
+import { PortfolioGrid } from '@/features/portfolio/components/PortfolioGrid';
 
 export function PortfolioPage() {
   const items = getPortfolioItems();

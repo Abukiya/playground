@@ -1,8 +1,9 @@
+import {  motion } from 'motion/react';
+
 import { Container } from '@/components/Container';
-import { Section } from '@/components/Section';
 import { Heading } from '@/components/Heading';
+import { Section } from '@/components/Section';
 import { ContactForm } from '@/features/contact/components/ContactForm';
-import { easeOut, motion } from 'motion/react';
 
 const varaints = {
   hidden: { opacity: 0, y: 20 },

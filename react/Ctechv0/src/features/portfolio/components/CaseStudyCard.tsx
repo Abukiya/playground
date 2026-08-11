@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import type { CaseStudy } from '@/features/portfolio/types';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
+
+import type { CaseStudy } from '@/features/portfolio/types';
+
 
 interface CaseStudyCardProps {
   study: CaseStudy;

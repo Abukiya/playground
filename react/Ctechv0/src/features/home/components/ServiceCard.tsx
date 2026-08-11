@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
+
 import type { Service } from '../types';
 
 const MotionLink = motion(Link);

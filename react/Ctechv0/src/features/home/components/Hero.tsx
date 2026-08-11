@@ -1,9 +1,10 @@
+import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
+
+import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Heading } from '@/components/Heading'
-import { Button } from '@/components/Button'
 import { SITE } from '@/config/site'
-import { motion } from 'motion/react'
 
 const childVariants = {
   hidden: { opacity: 0, y: 20 },

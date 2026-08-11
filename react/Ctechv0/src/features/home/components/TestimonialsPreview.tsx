@@ -1,8 +1,9 @@
-import { Container } from '@/components/Container';
-import { Section } from '@/components/Section';
-import { Heading } from '@/components/Heading';
-import type { Testimonial } from '@/features/home/types';
 import { motion } from 'motion/react';
+
+import { Container } from '@/components/Container';
+import { Heading } from '@/components/Heading';
+import { Section } from '@/components/Section';
+import type { Testimonial } from '@/features/home/types';
 
 const testimonials: Testimonial[] = [
   {

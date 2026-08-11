@@ -1,6 +1,7 @@
+import { motion } from 'motion/react'
+
 import { TeamMemberCard } from '@/features/team/components/TeamMemberCard'
 import type { TeamMember } from '@/features/team/types'
-import { motion } from 'motion/react'
 
 interface TeamGridProps {
   members: TeamMember[]

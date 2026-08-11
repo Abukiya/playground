@@ -1,9 +1,10 @@
-import { Container } from '@/components/Container';
-import { Section } from '@/components/Section';
-import { Heading } from '@/components/Heading';
-import { TeamGrid } from '@/features/team/components/TeamGrid';
-import { getTeamMembers } from '@/features/team/api/getTeam';
 import { motion } from 'motion/react';
+
+import { Container } from '@/components/Container';
+import { Heading } from '@/components/Heading';
+import { Section } from '@/components/Section';
+import { getTeamMembers } from '@/features/team/api/getTeam';
+import { TeamGrid } from '@/features/team/components/TeamGrid';
 
 const variants = {
   hidden: { opacity: 0, y: 20 },

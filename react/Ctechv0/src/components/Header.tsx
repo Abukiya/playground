@@ -1,7 +1,8 @@
-import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'motion/react'
+import { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
+
 import { NAV_LINKS, SITE } from '@/config/site'
 import { cn } from '@/utils/cn'
 

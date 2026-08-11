@@ -1,5 +1,6 @@
-import type { TeamMember } from '@/features/team/types'
 import { motion } from 'motion/react'
+
+import type { TeamMember } from '@/features/team/types'
 
 interface TeamMemberCardProps {
   member: TeamMember

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import { SITE, NAV_LINKS } from '@/config/site'
+
 import { Container } from '@/components/Container'
+import { SITE, NAV_LINKS } from '@/config/site'
 
 export function Footer() {
   return (

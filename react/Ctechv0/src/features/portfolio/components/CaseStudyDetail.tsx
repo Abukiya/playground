@@ -1,9 +1,10 @@
-import { Link, useParams, Navigate } from 'react-router-dom'
 import { ArrowLeft, ExternalLink } from 'lucide-react'
-import { Container } from '@/components/Container'
-import { Section } from '@/components/Section'
-import { Heading } from '@/components/Heading'
+import { Link, useParams, Navigate } from 'react-router-dom'
+
 import { Button } from '@/components/Button'
+import { Container } from '@/components/Container'
+import { Heading } from '@/components/Heading'
+import { Section } from '@/components/Section'
 import { getCaseStudy } from '@/features/portfolio/api/getPortfolio'
 
 export function CaseStudyDetail() {

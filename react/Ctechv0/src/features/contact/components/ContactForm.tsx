@@ -1,4 +1,6 @@
+import {  motion } from 'motion/react';
 import { useState, type FormEvent } from 'react';
+
 import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
 import { Textarea } from '@/components/Textarea';
@@ -6,7 +8,6 @@ import {
   submitContact,
   type ContactFormData,
 } from '@/features/contact/api/submitContact';
-import { easeOut, motion } from 'motion/react';
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);

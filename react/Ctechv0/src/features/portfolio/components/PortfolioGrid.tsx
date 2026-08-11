@@ -1,6 +1,7 @@
+import { motion } from 'motion/react'
+
 import { CaseStudyCard } from '@/features/portfolio/components/CaseStudyCard'
 import type { CaseStudy } from '@/features/portfolio/types'
-import { motion } from 'motion/react'
 
 interface PortfolioGridProps {
   items: CaseStudy[]

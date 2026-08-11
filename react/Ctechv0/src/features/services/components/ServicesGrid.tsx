@@ -1,6 +1,7 @@
+import {motion} from 'motion/react'
+
 import { ServiceCard } from '@/features/services/components/ServiceCard'
 import type { Service } from '@/features/services/types'
-import {motion} from 'motion/react'
 
 interface ServicesGridProps {
   services: Service[]

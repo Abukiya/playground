@@ -1,12 +1,16 @@
-import { Link } from 'react-router-dom';
 import { Code, TrendingUp, Printer } from 'lucide-react';
-import { Container } from '@/components/Container';
-import { Section } from '@/components/Section';
-import { Heading } from '@/components/Heading';
-import { Button } from '@/components/Button';
 import { motion } from 'motion/react';
-import ServiceCard from './ServiceCard';
+import { Link } from 'react-router-dom';
+
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
+import { Heading } from '@/components/Heading';
+import { Section } from '@/components/Section';
+
+
 import type { Service } from '../types';
+
+import ServiceCard from './ServiceCard';
 
 const services: Service[] = [
   {

@@ -1,9 +1,10 @@
-import { Container } from '@/components/Container';
-import { Section } from '@/components/Section';
-import { Heading } from '@/components/Heading';
-import { ServicesGrid } from '@/features/services/components/ServicesGrid';
-import { getServices } from '@/features/services/api/getServices';
 import { motion } from 'motion/react';
+
+import { Container } from '@/components/Container';
+import { Heading } from '@/components/Heading';
+import { Section } from '@/components/Section';
+import { getServices } from '@/features/services/api/getServices';
+import { ServicesGrid } from '@/features/services/components/ServicesGrid';
 
 const herovariants = {
   hidden: { opacity: 0, y: 20 },
