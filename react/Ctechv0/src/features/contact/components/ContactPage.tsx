@@ -5,9 +5,9 @@ import { Heading } from '@/components/Heading';
 import { Section } from '@/components/Section';
 import { ContactForm } from '@/features/contact/components/ContactForm';
 
-const varaints = {
+const slidingVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease:"easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeOut" as const } },
 };
 
 export function ContactPage() {
@@ -29,12 +29,12 @@ export function ContactPage() {
               visible: { transition: { staggerChildren: 0.15 } },
             }}
           >
-            <motion.div variants={varaints}>
+            <motion.div variants={slidingVariants}>
               <Heading>Get in Touch</Heading>
             </motion.div>
             <motion.p
               className="mt-4 text-lg text-brand-black/70"
-              variants={varaints}
+              variants={slidingVariants}
             >
               Have a project in mind? We&apos;d love to hear from you.
             </motion.p>
@@ -50,13 +50,13 @@ export function ContactPage() {
             >
               <motion.h2
                 className="font-display text-2xl font-bold text-brand-black mb-6"
-                variants={varaints}
+                variants={slidingVariants}
               >
                 Send us a message
               </motion.h2>
               <motion.p
                 className="mt-2 text-brand-black/70"
-                variants={varaints}
+                variants={slidingVariants}
               >
                 General inquiries, questions, or just want to say hello.
               </motion.p>
