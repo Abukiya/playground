@@ -41,6 +41,8 @@ const headingVariants = {
   visible: { opacity: 1, y: 0, transition:{duration:1} },
 };
 
+
+
 export function ServicesPreview() {
   return (
     <Section background="yellow">
