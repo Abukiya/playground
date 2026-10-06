@@ -17,5 +17,5 @@ import ScrollTriggered from './components/scroll-triggered';
 
 
 export default function App() {
-    return <ScrollTriggered />;
+    return <Saredlayout />;
 }
