@@ -1,10 +1,11 @@
 import { searchPosts } from "./api/fetchSearch";
 import { useState } from "react";
+import App2 from "./components/searchpost";
 function App() {
   const [post, setPost] = useState([]);
   async function clickhandler() {
     try {
-      const data = await searchPosts(2, 1);
+      const data = await searchPosts(1, 1);
       console.log(data);
       setPost(data);
     } catch (error) {
@@ -14,9 +15,10 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="flex justify-center gap-2 flex-col items-center">
         <div>
           <button
+          className="p-1  rounded-lg bg-slate-500 hover:bg-slate-600 mt-2"
             onClick={() => {
               clickhandler();
             }}
@@ -33,6 +35,7 @@ function App() {
             </div>
           ))}
         </div>
+        <App2/>
       </div>
     </>
   );
