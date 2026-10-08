@@ -2,6 +2,7 @@ import { searchPosts } from "./api/fetchSearch";
 import { useState } from "react";
 import App2 from "./components/searchpost";
 import Searchbytext from "./components/searchbytext";
+import Searchasyoutype from "./components/searchasyoutype";
 function App() {
   const [post, setPost] = useState([]);
   async function clickhandler() {
@@ -38,6 +39,7 @@ function App() {
         </div>
         <App2 />
         <Searchbytext />
+        <Searchasyoutype/>
       </div>
     </>
   );
