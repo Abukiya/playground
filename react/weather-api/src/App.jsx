@@ -12,8 +12,10 @@ function App() {
     setErr(null);
     try {
       const data = await getWeather(query);
+      console.log(data.days.length);
       setResult(data);
       console.log(data);
+      const currentTime = data.currentConditions.datetime;
       setHasSearched(true);
     } catch (error) {
       setErr("something went wrong, try again");
@@ -45,7 +47,26 @@ function App() {
           {!isloading && !err && hasSearched && result.length === 0 && (
             <p>No results found.</p>
           )}
-          {!isloading && <div className="text-4xl">{result.queryCost}</div>}
+          {!isloading && (
+            <div className="text-4xl">
+              <h1>{result.resolvedAddress}</h1>
+              {/* <p>{result.currentConditions.datetime}</p> */}
+              <p>{result?.currentConditions?.datetime}</p>
+              <p>{result.currentConditions.conditions}</p>
+              <p>{result.currentConditions.temp}</p>
+              <p>{result.currentConditions.windspeed}</p>
+              <p>{result.currentConditions.precipprob}</p>
+              <p>{result.currentConditions.humidity}</p>
+              <p>
+                {new Intl.DateTimeFormat("en-GB", {
+                  timeZone: result?.timezone,
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  hour12: false,
+                }).format(new Date())}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </>
